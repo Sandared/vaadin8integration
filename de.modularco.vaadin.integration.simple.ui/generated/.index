@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1516916776436" name="de.modularco.vaadin.integration.simple.ui" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="de.modularco.vaadin.integration.simple.ui"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="8c727f1da1ffb7a7ef706668c89348f5f26903425259e6522d9c9e951df6c516"/>
+      <attribute name="url" value="generated/de.modularco.vaadin.integration.simple.ui.jar"/>
+      <attribute name="size" type="Long" value="28773"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="de.modularco.vaadin.integration.simple.ui"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="de.modularco.vaadin.integration.simple.ui"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="de.modularco.vaadin.integration.simple.ui"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="de.modularco.vaadin.integration.simple.ui"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0"/>
+      <directive name="uses" value="com.vaadin.navigator,com.vaadin.server,com.vaadin.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.vaadin.ui.UI"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.vaadin.ui.UI"/>
+      <attribute name="osgi.http.whiteboard.servlet.pattern" value="/test"/>
+      <directive name="uses" value="com.vaadin.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
+      <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
+      <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
+      <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
+      <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT2/examplews"/>
+      <attribute name="project.path" value="/de.modularco.vaadin.integration.simple.ui"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.navigator)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.server)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.ui)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.xtext.xbase.lib)(version&gt;=2.13.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=de.modularco.vaadin.integration.simple.ui.MyView)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=de.modularco.vaadin.integration.simple.ui.MyView)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>

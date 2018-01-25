@@ -1,0 +1,112 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>local</groupId>
+	<artifactId>central</artifactId>
+	<version>0.0.0</version>
+
+	<packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.gogo.shell</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	
+	
+		<!-- Apache Felix -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.framework</artifactId>
+		    <version>5.6.10</version>
+		</dependency>
+		
+			<!-- Felix Eventadmin -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.eventadmin</artifactId>
+		    <version>1.4.10</version>
+		</dependency>
+			
+			<!-- Felix Metatype -->
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.metatype</artifactId>
+		    <version>1.1.6</version>
+		</dependency>
+		
+			<!-- Felix Gogo -->
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.gogo.shell</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.felix</groupId>
+		    <artifactId>org.apache.felix.gogo.command</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+		
+			<!-- Felix HTTP -->
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.servlet-api</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.api</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.http.jetty</artifactId>
+			<version>3.4.8</version>
+		</dependency> 
+		
+		<!-- Xtend 2.13 -->
+		<dependency>
+            <groupId>org.eclipse.xtend</groupId>
+            <artifactId>org.eclipse.xtend.lib</artifactId>
+            <version>2.13.0</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+        
+        <!-- Vaadin -->
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-osgi-integration</artifactId>
+		    <version>8.2.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-server</artifactId>
+		    <version>8.2.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-themes</artifactId>
+		    <version>8.2.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vaadin</groupId>
+		    <artifactId>vaadin-client-compiled</artifactId>
+		    <version>8.2.1</version>
+		</dependency>
+		
+	</dependencies>
+
+</project>

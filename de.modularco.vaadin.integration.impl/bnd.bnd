@@ -1,0 +1,11 @@
+-buildpath: \
+	org.eclipse.xtend.lib,\
+	org.eclipse.xtend.lib.macro,\
+	org.eclipse.xtext.xbase.lib,\
+	com.google.guava;version=18.0,\
+	osgi.enroute.base.api,\
+	com.vaadin.server,\
+	com.vaadin.shared
+
+src=src,xtend-gen
+Private-Package: de.modularco.vaadin.integration.impl

@@ -1,0 +1,9 @@
+.DS_Store
+.gradle/
+/generated/
+enroute.zip
+.metadata
+*.classpath
+*.project
+*.java._trace
+*.xtendbin

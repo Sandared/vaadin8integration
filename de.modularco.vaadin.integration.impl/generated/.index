@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1516916231932" name="de.modularco.vaadin.integration.impl" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="de.modularco.vaadin.integration.impl"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="469369b20b176c71c8cda59549308d8f46671122aa90a98f0a5094a86fac62d8"/>
+      <attribute name="url" value="generated/de.modularco.vaadin.integration.impl.jar"/>
+      <attribute name="size" type="Long" value="66624"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="de.modularco.vaadin.integration.impl"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="de.modularco.vaadin.integration.impl"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT2/examplews"/>
+      <attribute name="project.path" value="/de.modularco.vaadin.integration.impl"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.server)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.shared)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.ui)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.xtend2.lib)(version&gt;=2.13.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.xtext.xbase.lib)(version&gt;=2.13.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.vaadin.ui.UI)"/>
+      <directive name="effective" value="active"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.cm.ConfigurationAdmin)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.contract">
+      <attribute name="osgi.contract" value="JavaServlet"/>
+      <directive name="filter" value="(&amp;(osgi.contract=JavaServlet)(version=3.1.0))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.vaadin.ui.UI)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=org.osgi.service.cm.ConfigurationAdmin)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.vaadin.ui.UI)"/>
+      <directive name="resolution" value="optional"/>
+      <directive name="cardinality" value="multiple"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>
