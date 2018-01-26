@@ -20,9 +20,9 @@ public class UIServiceListener implements ServiceListener {
   public void serviceChanged(final ServiceEvent event) {
     boolean _equals = Integer.valueOf(ServiceEvent.REGISTERED).equals(Integer.valueOf(event.getType()));
     if (_equals) {
-      this.latch.countDown();
       ServiceReference<?> _serviceReference = event.getServiceReference();
       this.ref = ((ServiceReference<UI>) _serviceReference);
+      this.latch.countDown();
     }
   }
   
