@@ -27,7 +27,7 @@ class OSGiUIProvider extends UIProvider{
 	 */
 	override getUIClass(UIClassSelectionEvent event) {
 		return getUIInternal(event).class
-		//kasflkhdfökjshadfkjh
+		//kasflkhdfÃ¶kjshadfkjh
 	}
 	
 	/**
@@ -121,7 +121,7 @@ class OSGiUIProvider extends UIProvider{
 				}
 			].ui
 		} catch (Exception exception) {
-			println('''Could not find any matching UI for path: «urlPattern». Currently registered UI references: «uiRefs»''')		
+			println('''Could not find any matching UI for path: Â«urlPatternÂ». Currently registered UI references: Â«uiRefsÂ»''')		
 			throw exception	
 		}
 		return ui
@@ -138,8 +138,8 @@ class UIServiceListener implements ServiceListener{
 	
 	override serviceChanged(ServiceEvent event) {
 		if(ServiceEvent.REGISTERED.equals(event.type)){
-			latch.countDown
 			ref = event.serviceReference as ServiceReference<UI>
+			latch.countDown
 		}
 	}
 	
