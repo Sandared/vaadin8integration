@@ -24,8 +24,26 @@ class Helper {
 	 * /test/ and /test/api would return -1 as they do not match in sense of servlet pattern matching
 	 */
 	static def int matchingPathSegments(String path, String other, String delimiter){
-		val segmentsPath = path.split(delimiter)
-		val segmentsOther = other.split(delimiter)
+		if(path == null || other == null || delimiter == null || delimiter.length != 1)
+			throw new IllegalArgumentException('''path: «path», other: «other», delimiter: «delimiter»''')
+	
+		var delimiterToUse = delimiter
+		
+		// delimiter is a regex so escape special characters
+		if('\\^$.|?*+()[{'.contains(delimiterToUse))
+			delimiterToUse = '\\' + delimiterToUse
+		
+		var segmentsPath = path.split(delimiterToUse)
+		var segmentsOther = other.split(delimiterToUse)
+		
+		// Make sure that both paths are equal in segment length. 
+		// If for example the first is /test and the other is /test/*
+		// /test would have segment length 2 and will be added 1 extra empty segment
+		// thus it will have 3 segments as well as /test/*
+		if(!path.endsWith('*')) 
+			segmentsPath = ObjectArrays.concat(segmentsPath, '')
+		if(!other.endsWith('*')) 
+			segmentsOther = ObjectArrays.concat(segmentsOther, '')
 		var matchingSegments = -1
 		
 		if(segmentsOther.size > segmentsPath.size)
