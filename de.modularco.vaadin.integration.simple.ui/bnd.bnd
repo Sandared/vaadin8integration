@@ -6,7 +6,8 @@
 	osgi.enroute.base.api,\
 	com.vaadin.server;version=8.2,\
 	org.jsoup;version=1.8,\
-	com.vaadin.shared;version=8.2
+	com.vaadin.shared;version=8.2,\
+	com.byteowls.vaadin-chartjs
 	
 src=src,xtend-gen
 Export-Package: de.modularco.vaadin.integration.simple.ui

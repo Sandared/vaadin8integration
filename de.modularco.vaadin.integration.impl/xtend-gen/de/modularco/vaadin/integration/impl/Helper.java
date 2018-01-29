@@ -1,11 +1,104 @@
 package de.modularco.vaadin.integration.impl;
 
+import com.google.common.base.Objects;
+import com.google.common.collect.ObjectArrays;
 import java.util.List;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.xbase.lib.Conversions;
 
 @SuppressWarnings("all")
 public class Helper {
   public final static String UNIQUE_ID_PROPERTY = "de.unia.smds.vaadin.integration.uid";
+  
+  public final static String VAADIN_VERSION_PREFIX = "vaadin-8.2.1";
+  
+  private final static String VAADIN_ROOT_ALIAS_FORMAT = "/%s/VAADIN/%s";
+  
+  private final static String VAADIN_ROOT_FORMAT = "/VAADIN/%s";
+  
+  private final static String VAADIN_THEME_ALIAS_FORMAT = "/%s/VAADIN/themes/%s";
+  
+  private final static String VAADIN_WIDGETSET_ALIAS_FORMAT = "/%s/VAADIN/widgetsets/%s";
+  
+  private final static String VAADIN_THEME_PATH_FORMAT = "/VAADIN/themes/%s";
+  
+  private final static String VAADIN_WIDGETSET_PATH_FORMAT = "/VAADIN/widgetsets/%s";
+  
+  /**
+   * Returns the alias for the theme given a the theme name and a path prefix.
+   * 
+   * @param themeName
+   *            the theme name
+   * @param pathPrefix
+   *            the prefix for the /VAADIN/ folder
+   * @return the alias
+   */
+  public static String getThemeAlias(final String themeName, final String pathPrefix) {
+    return String.format(Helper.VAADIN_THEME_ALIAS_FORMAT, pathPrefix, themeName);
+  }
+  
+  /**
+   * Returns the expected/default path of the theme folder in the source
+   * bundle.
+   * 
+   * @param themeName
+   *            the name of the theme
+   * @return the path of the theme folder in the source bundle
+   */
+  public static String getThemePath(final String themeName) {
+    return String.format(Helper.VAADIN_THEME_PATH_FORMAT, themeName);
+  }
+  
+  /**
+   * Returns the alias for a widgetset given a the widgetset name and a path
+   * prefix.
+   * 
+   * @param widgetsetName
+   *            the name of the widgetset
+   * @param pathPrefix
+   *            the prefix for the /VAADIN/ folder
+   * @return the alias
+   */
+  public static String getWidgetsetAlias(final String widgetsetName, final String pathPrefix) {
+    return String.format(Helper.VAADIN_WIDGETSET_ALIAS_FORMAT, pathPrefix, widgetsetName);
+  }
+  
+  /**
+   * Returns the expected/default path of the widgetset folder in the source
+   * bundle.
+   * 
+   * @param widgetsetName
+   *            the name of the widgetset
+   * @return the path of the widgetset folder in the source bundle
+   */
+  public static String getWidgetsetPath(final String widgetsetName) {
+    return String.format(Helper.VAADIN_WIDGETSET_PATH_FORMAT, widgetsetName);
+  }
+  
+  /**
+   * Returns the alias for a resource that will placed under the /VAADIN/
+   * folder.
+   * 
+   * @param resourceName
+   *            the name of the resource
+   * @param pathPrefix
+   *            the prefix for the /VAADIN/ folder
+   * @return the alias
+   */
+  public static String getRootResourceAlias(final String resourceName, final String pathPrefix) {
+    return String.format(Helper.VAADIN_ROOT_ALIAS_FORMAT, pathPrefix, resourceName);
+  }
+  
+  /**
+   * Returns the expected/default path of the resource in the source bundle.
+   * 
+   * @param resourceName
+   *            the name of the resource
+   * @return the path of the resource in the source bundle
+   */
+  public static String getRootResourcePath(final String resourceName) {
+    return String.format(Helper.VAADIN_ROOT_FORMAT, resourceName);
+  }
   
   /**
    * Often the servlet paths of UIs are given like this: /test </br>

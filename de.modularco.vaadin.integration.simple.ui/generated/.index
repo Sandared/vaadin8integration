@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1516916776436" name="de.modularco.vaadin.integration.simple.ui" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1517240542804" name="de.modularco.vaadin.integration.simple.ui" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="de.modularco.vaadin.integration.simple.ui"/>
@@ -7,9 +7,9 @@
       <attribute name="version" type="Version" value="0.0.0"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="8c727f1da1ffb7a7ef706668c89348f5f26903425259e6522d9c9e951df6c516"/>
+      <attribute name="osgi.content" value="69cf8aa3f643048f6cd7d988c4e22890e443ebf10c824651b32790c75c584f14"/>
       <attribute name="url" value="generated/de.modularco.vaadin.integration.simple.ui.jar"/>
-      <attribute name="size" type="Long" value="28773"/>
+      <attribute name="size" type="Long" value="42666"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -25,7 +25,7 @@
       <attribute name="version" type="Version" value="1.0.0"/>
       <attribute name="bundle-symbolic-name" value="de.modularco.vaadin.integration.simple.ui"/>
       <attribute name="bundle-version" type="Version" value="0.0.0"/>
-      <directive name="uses" value="com.vaadin.navigator,com.vaadin.server,com.vaadin.ui"/>
+      <directive name="uses" value="com.byteowls.vaadin.chartjs,com.vaadin.navigator,com.vaadin.server,com.vaadin.ui"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="com.vaadin.ui.UI"/>
@@ -43,6 +43,11 @@
       <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
     </capability>
     <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.vaadin.ui.UI"/>
+      <attribute name="osgi.http.whiteboard.servlet.pattern" value="/graph"/>
+      <directive name="uses" value="com.vaadin.ui"/>
+    </capability>
+    <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="de.modularco.vaadin.integration.simple.ui.MyView"/>
       <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
     </capability>
@@ -55,9 +60,24 @@
       <directive name="uses" value="de.modularco.vaadin.integration.simple.ui"/>
     </capability>
     <capability namespace="bndtools.workspace">
-      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT2/examplews"/>
+      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT/osgi8integration"/>
       <attribute name="project.path" value="/de.modularco.vaadin.integration.simple.ui"/>
     </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.byteowls.vaadin.chartjs)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.byteowls.vaadin.chartjs.config)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.byteowls.vaadin.chartjs.data)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.byteowls.vaadin.chartjs.options)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.byteowls.vaadin.chartjs.options.types)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
     <requirement namespace="osgi.wiring.package">
       <directive name="filter" value="(&amp;(osgi.wiring.package=com.vaadin.navigator)(version&gt;=8.2.0)(!(version&gt;=9.0.0)))"/>
     </requirement>

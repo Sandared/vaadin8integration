@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1516917040910" name="de.modularco.vaadin.integration.run" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1517240507194" name="de.modularco.vaadin.integration.run" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="de.modularco.vaadin.integration.run"/>
@@ -7,9 +7,9 @@
       <attribute name="version" type="Version" value="0.0.0"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="4c1f79732b61dabcee071f5eafa2034f3827c3b11d51ff6072e6686fc096eb4b"/>
+      <attribute name="osgi.content" value="e0692c12f739accfcb61150f91c53ff171e42eaea40a23beb66319c312f7fca6"/>
       <attribute name="url" value="generated/de.modularco.vaadin.integration.run.jar"/>
-      <attribute name="size" type="Long" value="338"/>
+      <attribute name="size" type="Long" value="351"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
@@ -21,7 +21,7 @@
       <attribute name="bundle-version" type="Version" value="0.0.0"/>
     </capability>
     <capability namespace="bndtools.workspace">
-      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT2/examplews"/>
+      <attribute name="bndtools.workspace" value="file:/C:/MyPrograms/Eclipse/Oxygen/JDT/osgi8integration"/>
       <attribute name="project.path" value="/de.modularco.vaadin.integration.run"/>
     </capability>
   </resource>

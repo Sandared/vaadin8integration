@@ -27,7 +27,6 @@ class OSGiUIProvider extends UIProvider{
 	 */
 	override getUIClass(UIClassSelectionEvent event) {
 		return getUIInternal(event).class
-		//kasflkhdfÃ¶kjshadfkjh
 	}
 	
 	/**
@@ -121,7 +120,7 @@ class OSGiUIProvider extends UIProvider{
 				}
 			].ui
 		} catch (Exception exception) {
-			println('''Could not find any matching UI for path: Â«urlPatternÂ». Currently registered UI references: Â«uiRefsÂ»''')		
+			println('''Could not find any matching UI for path: «urlPattern». Currently registered UI references: «uiRefs»''')		
 			throw exception	
 		}
 		return ui

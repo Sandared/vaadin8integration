@@ -5,7 +5,8 @@
 	osgi.identity;filter:='(osgi.identity=de.modularco.vaadin.integration.simple.ui)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
 	osgi.identity;filter:='(osgi.identity=com.vaadin.client-compiled)',\
-	osgi.identity;filter:='(osgi.identity=com.vaadin.themes)'
+	osgi.identity;filter:='(osgi.identity=com.vaadin.themes)',\
+	osgi.identity;filter:='(&(osgi.identity=com.byteowls.vaadin-chartjs)(version>=1.1.1))'
 -runbundles: \
 	com.google.guava;version='[18.0.0,18.0.1)',\
 	com.vaadin.external.gentyref;version='[1.2.0,1.2.1)',\
@@ -27,4 +28,5 @@
 	org.jsoup;version='[1.8.3,1.8.4)',\
 	org.osgi.compendium;version='[4.1.0,4.1.1)',\
 	com.vaadin.client-compiled;version='[8.2.1,8.2.2)',\
-	com.vaadin.themes;version='[8.2.1,8.2.2)'
+	com.vaadin.themes;version='[8.2.1,8.2.2)',\
+	com.byteowls.vaadin-chartjs;version='[1.1.1,1.1.2)'
