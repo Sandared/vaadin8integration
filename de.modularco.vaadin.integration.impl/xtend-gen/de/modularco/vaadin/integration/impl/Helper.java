@@ -33,24 +33,54 @@ public class Helper {
    * /test/ and /test/api would return -1 as they do not match in sense of servlet pattern matching
    */
   public static int matchingPathSegments(final String path, final String other, final String delimiter) {
-    final String[] segmentsPath = path.split(delimiter);
-    final String[] segmentsOther = other.split(delimiter);
+    if ((((Objects.equal(path, null) || Objects.equal(other, null)) || Objects.equal(delimiter, null)) || (delimiter.length() != 1))) {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("path: ");
+      _builder.append(path);
+      _builder.append(", other: ");
+      _builder.append(other);
+      _builder.append(", delimiter: ");
+      _builder.append(delimiter);
+      throw new IllegalArgumentException(_builder.toString());
+    }
+    String delimiterToUse = delimiter;
+    boolean _contains = "\\^$.|?*+()[{".contains(delimiterToUse);
+    if (_contains) {
+      delimiterToUse = ("\\" + delimiterToUse);
+    }
+    String[] segmentsPath = path.split(delimiterToUse);
+    String[] segmentsOther = other.split(delimiterToUse);
+    boolean _endsWith = path.endsWith("*");
+    boolean _not = (!_endsWith);
+    if (_not) {
+      segmentsPath = ObjectArrays.<String>concat(segmentsPath, "");
+    }
+    boolean _endsWith_1 = other.endsWith("*");
+    boolean _not_1 = (!_endsWith_1);
+    if (_not_1) {
+      segmentsOther = ObjectArrays.<String>concat(segmentsOther, "");
+    }
     int matchingSegments = (-1);
-    int _size = ((List<String>)Conversions.doWrapArray(segmentsOther)).size();
-    int _size_1 = ((List<String>)Conversions.doWrapArray(segmentsPath)).size();
+    final String[] _converted_segmentsOther = (String[])segmentsOther;
+    int _size = ((List<String>)Conversions.doWrapArray(_converted_segmentsOther)).size();
+    final String[] _converted_segmentsPath = (String[])segmentsPath;
+    int _size_1 = ((List<String>)Conversions.doWrapArray(_converted_segmentsPath)).size();
     boolean _greaterThan = (_size > _size_1);
     if (_greaterThan) {
       return matchingSegments;
     }
-    int _size_2 = ((List<String>)Conversions.doWrapArray(segmentsOther)).size();
-    int _size_3 = ((List<String>)Conversions.doWrapArray(segmentsPath)).size();
+    final String[] _converted_segmentsOther_1 = (String[])segmentsOther;
+    int _size_2 = ((List<String>)Conversions.doWrapArray(_converted_segmentsOther_1)).size();
+    final String[] _converted_segmentsPath_1 = (String[])segmentsPath;
+    int _size_3 = ((List<String>)Conversions.doWrapArray(_converted_segmentsPath_1)).size();
     boolean _lessThan = (_size_2 < _size_3);
     if (_lessThan) {
-      int _size_4 = ((List<String>)Conversions.doWrapArray(segmentsOther)).size();
+      final String[] _converted_segmentsOther_2 = (String[])segmentsOther;
+      int _size_4 = ((List<String>)Conversions.doWrapArray(_converted_segmentsOther_2)).size();
       int _minus = (_size_4 - 1);
       boolean _equals = "*".equals(segmentsOther[_minus]);
-      boolean _not = (!_equals);
-      if (_not) {
+      boolean _not_2 = (!_equals);
+      if (_not_2) {
         return matchingSegments;
       }
     }
